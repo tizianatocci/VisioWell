@@ -1,0 +1,50 @@
+FROM nvidia/cuda:13.0.1-cudnn-runtime-ubuntu22.04
+
+ENV PATH="/opt/conda/bin:$PATH"
+
+# 1. Install system dependencies
+# We install ca-certificates FIRST to fix SSL/HTTPS connection issues
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends ca-certificates && \
+    # Optional: Switch to HTTPS mirrors if your network requires it
+    #sed -i 's|http://archive.ubuntu.com|https://archive.ubuntu.com|g' /etc/apt/sources.list && \
+    #sed -i 's|http://security.ubuntu.com|https://security.ubuntu.com|g' /etc/apt/sources.list && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends \
+        wget \
+        curl \
+        git && \
+    # Clean up apt cache to reduce image size
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# 2. Install Miniconda
+# Using --no-check-certificate as a secondary fail-safe for restricted networks
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh && \
+    bash /tmp/miniconda.sh -b -p /opt/conda && \
+    rm /tmp/miniconda.sh
+
+# 3. Configure Conda and install CuPy
+# Standardized the channel setup and installed CuPy via conda-forge
+RUN conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main && \
+    conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r && \
+    conda config --add channels conda-forge && \
+    conda config --set channel_priority strict && \
+    conda install -y python=3.10 cupy=13.6.0 && \
+    conda clean -afy
+
+WORKDIR /app
+
+# 4. Install Poetry and remaining dependencies from pyproject.toml
+ENV POETRY_VIRTUALENVS_CREATE=false
+RUN pip install --no-cache-dir poetry
+
+# Copy dependency files first (cache-friendly)
+COPY docker/step0/pyproject.toml docker/step0/poetry.lock ./
+
+RUN poetry install --no-root --no-cache
+
+# 5. Copy source code
+COPY src ./src
+
+# No CMD needed - Nextflow will call the scripts directly

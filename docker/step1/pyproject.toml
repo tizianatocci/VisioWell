@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "visiowell-pipeline"
+version = "0.1.0"
+description = "VisioWell inference pipeline using CellposeSAM"
+authors = ["Tiziana T."]
+readme = "README.md"
+package-mode = false
+# packages = [{ include = "visiowell_pipeline", from = "../../src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+
+# scientific stack
+numpy = "2.1.2"
+scipy = "1.15.3"
+pandas = "2.3.3"
+matplotlib = "3.10.7"
+networkx = "3.4.2"
+cycler = "0.12.1"
+kiwisolver = "1.4.9"
+packaging = "25.0"
+python-dateutil = "2.9.0.post0"
+pytz = "2025.2"
+tzdata = "2025.2"
+ruptures = "1.1.10"
+
+# imaging / IO
+opencv-python-headless = "4.12.0.88"
+tifffile = "2025.5.10"
+imagecodecs = "2025.3.30"
+imageio = "2.37.2"
+pillow = "12.0.0"
+aicspylibczi = "3.3.1"
+roifile = "2025.5.10"
+scikit-image = "0.25.2"
+fill_voids = "2.1.1"
+
+# deep learning
+cellpose = "4.0.7"
+segment-anything = "1.0"
+
+# utilities
+tqdm = "4.67.1"
+psutil = "7.1.3"
+natsort = "8.4.0"
+GPUtil = "1.4.0"
+six = "1.17.0"
+
+# font / graphics
+fonttools = "4.61.1"
+Jinja2 = "3.1.6"
+MarkupSafe = "2.1.5"
+
+# optional GUI / plotting
+pyqtgraph = "0.14.0"
+PyQt6 = "6.10.0"
+PyQt6-Qt6 = "6.10.1"
+PyQt6_sip = "13.10.2"
+superqt = "0.7.6"
+lazy_loader = "0.4"
+fastrlock = "0.8.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

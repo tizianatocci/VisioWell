@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.vscode/
+src/visiowell_pipeline/classes/classes.py
+data/
+results/
+notebook/figures/
+*.tar
+*.tar.gz
+*.zip
+comparison_models/output/
+comparison_models/trackastra_out/
+comparison_models/output_rtx4090/
+tiff_videos/

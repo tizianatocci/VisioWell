@@ -1,0 +1,50 @@
+# Ignore Git repository
+.git
+.gitignore
+
+# Ignore Python cache and bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+.venv/
+env/
+
+# Ignore Poetry cache (local)
+poetry.lock.backup
+*.lock
+*.bak
+
+# Ignore Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# Ignore temporary files and logs
+*.log
+*.tmp
+*.swp
+*.out
+*.cache
+
+# Ignore datasets, large files, or notebooks not needed in the image
+data/
+datasets/
+*.h5
+*.npy
+*.tiff
+*.tif
+*.csv
+*.czi
+.notebooks_temp/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional: ignore editor/project files
+.vscode/
+.idea/
+*.iml

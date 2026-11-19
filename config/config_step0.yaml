@@ -1,0 +1,87 @@
+# 20250807_OCI
+New-01-Scene-01-TR1-A01.czi:
+  rotation: -15
+  dir_results: ../Wells/MB07082025_new/Scene001
+New-01-Scene-02-TR2-A02.czi:
+  rotation: 0
+  dir_results: ../Wells/MB07082025_new/Scene002
+New-01-Scene-03-TR3-A03.czi:
+  rotation: 0
+  dir_results: ../Wells/MB07082025_new/Scene003
+New-01-Scene-04-TR4-A04.czi:
+  rotation: -8
+  dir_results: ../Wells/MB07082025_new/Scene004
+New-01-Scene-05-TR5-B04.czi:
+  rotation: 0
+  dir_results: ../Wells/MB07082025_new/Scene005
+New-01-Scene-06-TR6-B03.czi:
+  rotation: -8
+  dir_results: ../Wells/MB07082025_new/Scene006
+New-01-Scene-07-TR7-B02.czi:
+  rotation: 0
+  dir_results: ../Wells/MB07082025_new/Scene007
+New-01-Scene-08-TR8-B01.czi:
+  rotation: 0
+  dir_results: ../Wells/MB07082025_new/Scene008
+New-01-Scene-09-TR9-C01.czi:
+  rotation: 8
+  dir_results: ../Wells/MB07082025_new/Scene009
+New-01-Scene-10-TR10-C02.czi:
+  rotation: 0
+  dir_results: ../Wells/MB07082025_new/Scene010
+
+# 20250901_OCI
+OCI_Drug_Screening-02(1).czi:
+  rotation: 0
+OCI_Drug_Screening-02(2).czi:
+  rotation: 0
+OCI_Drug_Screening-02(3).czi:
+  rotation: 0
+OCI_Drug_Screening-02(4).czi:
+  rotation: 0
+OCI_Drug_Screening-02(5).czi:
+  rotation: 0
+OCI_Drug_Screening-02(6).czi:
+  rotation: 0
+OCI_Drug_Screening-02(7).czi:
+  rotation: 0
+OCI_Drug_Screening-02(8).czi:
+  rotation: 0
+OCI_Drug_Screening-02(9).czi:
+  rotation: 0
+OCI_Drug_Screening-02(10).czi:
+  rotation: 0
+OCI_Drug_Screening-02(11).czi:
+  rotation: 0
+
+
+# 20250911_CordBlood
+HPC.czi:
+  rotation: 0
+HSC.czi:
+  rotation: 10
+MPP.czi:
+  rotation: 0
+LMPP.czi:
+  rotation: 0
+
+
+# 20251003_CordBlood
+MB_251003_cord_blood_34-01(HPC_3000).czi:
+  rotation: 4 #maybe I should rerun it with 0 as in the first try
+MB_251003_cord_blood_34-01(HPC_epp).czi:
+  rotation: 0
+MB_251003_cord_blood_34-01(HSC_2000).czi:
+  rotation: 15
+MB_251003_cord_blood_34-01(HSC_epp).czi:
+  rotation: 0
+MB_251003_cord_blood_34-01(LMPP_epp).czi:
+  rotation: 0
+MB_251003_cord_blood_34-01(MPP_epp).czi:
+  rotation: 0
+MB_251003_cord_blood_34-01(HPC_3000)_second_part.czi:
+  rotation: 0
+MB_251003_cord_blood_34-01(HPC_epp)_second_part.czi:
+  rotation: 0
+MB_251003_cord_blood_34-01(LMPP_epp)_second_part.czi:
+  rotation: 0

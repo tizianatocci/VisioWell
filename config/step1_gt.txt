@@ -1,0 +1,151 @@
+"""
+
+###### GROUNDTRUTH
+### 07082025
+# BMS
+name_experiment = "MB_250807" # insert the name of the experiment of the video to analyse
+name_series_list = ["sherlock_New-01-Scene-01-TR1-A01_tile003",
+"sherlock_New-01-Scene-01-TR1-A01_tile051",
+"sherlock_New-01-Scene-01-TR1-A01_tile068",
+"sherlock_New-01-Scene-01-TR1-A01_tile069",
+"sherlock_New-01-Scene-01-TR1-A01_tile069",
+"sherlock_New-01-Scene-01-TR1-A01_tile112",
+"sherlock_New-01-Scene-01-TR1-A01_tile147",
+"sherlock_New-01-Scene-01-TR1-A01_tile163",
+"sherlock_New-01-Scene-01-TR1-A01_tile176"
+]
+name_well_list = [ "b2", "a1", "b4", "b2", "d1", "a4", "b4", "a2","b4"]
+path_exp = "../Wells/MB07082025/Scene001"
+
+# Palbo
+name_experiment = "MB_250807" # insert the name of the experiment of the video to analyse
+name_series_list = [ "sherlock_New-01-Scene-07-TR7-B02_tile002",
+"sherlock_New-01-Scene-07-TR7-B02_tile005",
+#"sherlock_New-01-Scene-07-TR7-B02_tile005",
+"sherlock_New-01-Scene-07-TR7-B02_tile056",
+"sherlock_New-01-Scene-07-TR7-B02_tile080",
+"sherlock_New-01-Scene-07-TR7-B02_tile082",
+"sherlock_New-01-Scene-07-TR7-B02_tile164"]
+name_well_list = ["a4", #"a3", 
+                  "a3", "d4", "c3", "a4", "a4"]
+path_exp = "../Wells/MB07082025/Scene007"
+
+# Venetoclax
+name_experiment = "MB_250807" # insert the name of the experiment of the video to analyse
+name_series_list = [ "sherlock_New-01-Scene-03-TR3-A03_tile004",
+"sherlock_New-01-Scene-03-TR3-A03_tile057",
+"sherlock_New-01-Scene-03-TR3-A03_tile085",
+"sherlock_New-01-Scene-03-TR3-A03_tile087",
+"sherlock_New-01-Scene-03-TR3-A03_tile130",
+"sherlock_New-01-Scene-03-TR3-A03_tile133",
+"sherlock_New-01-Scene-03-TR3-A03_tile153",
+"sherlock_New-01-Scene-03-TR3-A03_tile153",
+"sherlock_New-01-Scene-03-TR3-A03_tile180"
+]
+name_well_list = [ "a1","a2", "a2", "d2", "c1", "d2", "c1", "c2", "b2"]
+path_exp = "../Wells/MB07082025/Scene003"
+
+# JQ1
+name_experiment = "MB_250807" # insert the name of the experiment of the video to analyse
+name_series_list = [
+"sherlock_New-01-Scene-05-TR5-B04_tile113",
+"sherlock_New-01-Scene-05-TR5-B04_tile116",
+"sherlock_New-01-Scene-05-TR5-B04_tile153",
+"sherlock_New-01-Scene-05-TR5-B04_tile154",
+"sherlock_New-01-Scene-05-TR5-B04_tile155",
+"sherlock_New-01-Scene-05-TR5-B04_tile156",
+"sherlock_New-01-Scene-05-TR5-B04_tile157",
+"sherlock_New-01-Scene-05-TR5-B04_tile157",
+"sherlock_New-01-Scene-05-TR5-B04_tile163"
+]
+name_well_list =[ "b2", "c3", "b1", "c1", "c4", "a2", "b1", "c2", "c4"]
+path_exp = "../Wells/MB07082025/Scene005"
+
+# Control
+name_experiment = "MB_250807" # insert the name of the experiment of the video to analyse
+name_series_list = ["sherlock_New-01-Scene-09-TR9-C01_tile000",
+"sherlock_New-01-Scene-09-TR9-C01_tile008",
+"sherlock_New-01-Scene-09-TR9-C01_tile008",
+"sherlock_New-01-Scene-09-TR9-C01_tile036",
+"sherlock_New-01-Scene-09-TR9-C01_tile037",
+"sherlock_New-01-Scene-09-TR9-C01_tile064",
+"sherlock_New-01-Scene-09-TR9-C01_tile066",
+"sherlock_New-01-Scene-09-TR9-C01_tile066",
+"sherlock_New-01-Scene-09-TR9-C01_tile080"
+]
+name_well_list = [ "d1", "e2", "a4", "e1", "c4", "d4","a2", "a3", "a1"]
+path_exp = "../Wells/MB07082025/Scene009"
+
+### 03102025
+# HPC_3000
+name_experiment = "MB_251003" # insert the name of the experiment of the video to analyse
+name_series_list = ['sherlock_MB_251003_cord_blood_34-01(HPC_3000)_tile008',
+    'sherlock_MB_251003_cord_blood_34-01(HPC_3000)_tile009',
+    'sherlock_MB_251003_cord_blood_34-01(HPC_3000)_tile019',
+    'sherlock_MB_251003_cord_blood_34-01(HPC_3000)_tile021',
+    'sherlock_MB_251003_cord_blood_34-01(HPC_3000)_tile033',
+    'sherlock_MB_251003_cord_blood_34-01(HPC_3000)_tile053',
+    'sherlock_MB_251003_cord_blood_34-01(HPC_3000)_tile056',
+    'sherlock_MB_251003_cord_blood_34-01(HPC_3000)_tile058',
+    'sherlock_MB_251003_cord_blood_34-01(HPC_3000)_tile094',
+    'sherlock_MB_251003_cord_blood_34-01(HPC_3000)_tile097',
+    'sherlock_MB_251003_cord_blood_34-01(HPC_3000)_tile100']
+name_well_list = ['e2','d1','c2','d3','d1','b4','d1','b3','d4','b4','b1'
+]
+path_exp = "../Wells/MB03102025/HPC_3000"
+
+
+# HSC_2000
+name_experiment = "MB_251003" # insert the name of the experiment of the video to analyse
+name_series_list = [
+    'sherlock_MB_251003_cord_blood_34-01(HSC_2000)_tile044',
+    'sherlock_MB_251003_cord_blood_34-01(HSC_2000)_tile055',
+    'sherlock_MB_251003_cord_blood_34-01(HSC_2000)_tile059',
+    'sherlock_MB_251003_cord_blood_34-01(HSC_2000)_tile072',
+    'sherlock_MB_251003_cord_blood_34-01(HSC_2000)_tile074',
+    'sherlock_MB_251003_cord_blood_34-01(HSC_2000)_tile078',
+    'sherlock_MB_251003_cord_blood_34-01(HSC_2000)_tile084',
+    'sherlock_MB_251003_cord_blood_34-01(HSC_2000)_tile088',
+    'sherlock_MB_251003_cord_blood_34-01(HSC_2000)_tile102',
+    'sherlock_MB_251003_cord_blood_34-01(HSC_2000)_tile104'
+]
+name_well_list = [ 'a2','d3','b2','b3','c2','e3','c4','c3','d2','a3']
+path_exp = "../Wells/MB03102025/HSC_2000"
+
+# LMPP_epp
+name_experiment = "MB_251003" # insert the name of the experiment of the video to analyse
+name_series_list = [
+    'sherlock_MB_251003_cord_blood_34-01(LMPP_epp)_tile033',
+    'sherlock_MB_251003_cord_blood_34-01(LMPP_epp)_tile046',
+    'sherlock_MB_251003_cord_blood_34-01(LMPP_epp)_tile057',
+    'sherlock_MB_251003_cord_blood_34-01(LMPP_epp)_tile061',
+    'sherlock_MB_251003_cord_blood_34-01(LMPP_epp)_tile068',
+    'sherlock_MB_251003_cord_blood_34-01(LMPP_epp)_tile072',
+    'sherlock_MB_251003_cord_blood_34-01(LMPP_epp)_tile077',
+    'sherlock_MB_251003_cord_blood_34-01(LMPP_epp)_tile087',
+    'sherlock_MB_251003_cord_blood_34-01(LMPP_epp)_tile095',
+    'sherlock_MB_251003_cord_blood_34-01(LMPP_epp)_tile099'
+]
+name_well_list = ['e1','c1','a4','b1','d1','f1','c4','a2','b3','a2']
+path_exp = "../Wells/MB03102025/LMPP_epp"
+
+
+# MPP_epp
+name_experiment = "MB_251003" # insert the name of< the experiment of the video to analyse
+name_series_list = [
+    'sherlock_MB_251003_cord_blood_34-01(MPP_epp)_tile035',
+    'sherlock_MB_251003_cord_blood_34-01(MPP_epp)_tile043',
+    'sherlock_MB_251003_cord_blood_34-01(MPP_epp)_tile054',
+    'sherlock_MB_251003_cord_blood_34-01(MPP_epp)_tile067',
+    'sherlock_MB_251003_cord_blood_34-01(MPP_epp)_tile083',
+    'sherlock_MB_251003_cord_blood_34-01(MPP_epp)_tile088',
+    'sherlock_MB_251003_cord_blood_34-01(MPP_epp)_tile100',
+    'sherlock_MB_251003_cord_blood_34-01(MPP_epp)_tile101',
+    'sherlock_MB_251003_cord_blood_34-01(MPP_epp)_tile104',
+    'sherlock_MB_251003_cord_blood_34-01(MPP_epp)_tile106'
+]
+name_well_list = ['b2','c1','b3','b3','c4','d4','d2','b2','b2', 'b1']
+path_exp = "../Wells/MB03102025/MPP_epp"
+
+#
+"""

@@ -1,0 +1,7 @@
+path_exp: ../Wells/MB07082025_new/Scene001
+name_experiment: "MB_250807"
+dir_results: ../Results/MB07082025_new/Scene001
+positions: None
+name_series_list: None
+name_well_list: None
+flag_gt: False
