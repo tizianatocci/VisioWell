@@ -12,3 +12,6 @@ comparison_models/output/
 comparison_models/trackastra_out/
 comparison_models/output_rtx4090/
 tiff_videos/
+.nextflow/
+.nextflow.*
+work/

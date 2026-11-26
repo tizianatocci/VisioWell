@@ -94,6 +94,7 @@ Docker allows to avoid any manual local environment setting.
 
 ### Launching code with Docker images
 For task (A), adapt "D:\user\folder" to the folder containing the "data" subfolder.
+The docker images are `visiowell-step0` and `visiowell-step1`.
 ```bash
 docker run --rm -it --gpus all -v D:\user\folder:/app/visiowell visiowell-step0:latest bash
 
@@ -127,8 +128,23 @@ python3 -m src.visiowell_pipeline.pipeline.step2_output \
 ```
 
 ## Nextflow
-A nextflow pipeline is set up to be compatible with the local environments (done) and docker (work in progress). 
-Nextflow runs one step (A,B,C) after the other and it automatically takes care of selecting the right environment for the task.
+A nextflow pipeline is set up to be compatible with the docker images, `visiowell-step0` and `visiowell-step1`
+On Windows, you need to run nextflow from WSL.  
+Tested with Nextflow version 26.10.7.
+Nextflow runs one step (A,B,C) after the other and it automatically takes care of selecting the right environment for the task.  
+Change "data_dir" to your "data/" folder and "trainings_dir" to the path contaning the Trainings folder.
+```bash
+nextflow run main.nf -profile docker_local \
+  --exp_id "experiment" \
+  --sub_id "exp" \
+  --data_dir "/path/to/folder/with/czi/files" \
+  --trainings_dir "/path/to/Trainings" \
+  --czi_folder "/app/data" \
+  --cell_type "stem" \
+  --imaging_frequency 0.5 \
+  --time_interval_discrepancy 5 \
+  --colony_size_limit 30
+```
 
 ## Computational requirements
 Overall, GPU acceleration is required.  
