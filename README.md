@@ -93,13 +93,37 @@ For tasks(B,C), cellposesam_inference: link
 Docker allows to avoid any manual local environment setting.
 
 ### Launching code with Docker images
-For task (A), adapt "D:\user\folder" to the folder containing the data folder:
+For task (A), adapt "D:\user\folder" to the folder containing the "data" subfolder.
 ```bash
 docker run --rm -it --gpus all -v D:\user\folder:/app/visiowell visiowell-step0:latest bash
-poetry run python3 -m src.visiowell_pipeline.pipeline.step0_findwells \
+
+python3 -m src.visiowell_pipeline.pipeline.step0_findwells \
   --folder_path /app/visiowell/data \
   --rotation_angle 0 \
   --dir_results /app/visiowell/results/try1/step0
+```
+For task (B), use the same folder as in task (A) for "D:\user\folder", and replace "D:\user\Trainings" with the folder containing your trained weights. Task (A) must have been completed first.
+```bash
+docker run --rm -it --gpus all -v D:\user\folder:/app/visiowell -v D:\user\Trainings:/Trainings visiowell-step1:latest bash
+
+python3 -m src.visiowell_pipeline.pipeline.step1_predictions \
+  --path_exp /app/visiowell/results/try1/step0 \
+  --dir_results /app/visiowell/results/try1/step1
+```
+
+For task (C), run the command in the same container opened for task (B), right after task (B) has finished. No additional mount is needed.
+```bash
+python3 -m src.visiowell_pipeline.pipeline.step2_output \
+  --dir_results /app/visiowell/results/try1/step1 \
+  --dir_output /app/visiowell/results/try1/final \
+  --cell_type "stem" \
+  --imaging_frequency 0.5 \
+  --time_interval_discrepancy 5 \
+  --colony_size_limit 30 \
+  --name_folder "exp" \
+  --name_scene "exp" \
+  --dir_wells /app/visiowell/results/try1/step0 \
+  --qcreport_path /app/visiowell/results/try1/qc_report
 ```
 
 ## Nextflow
